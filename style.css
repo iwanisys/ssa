@@ -1,0 +1,620 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  background: #acaba9;
+}
+
+.container {
+  margin: 0 auto;
+  width: 920px;
+}
+
+.container-navbar {
+  margin: 0 auto;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+@font-face {
+  font-family: 'Univers 45 Light';
+  src: url("./assets/fonts/univers-45-light.otf");
+  /* IE9 Compat Modes */
+}
+
+@font-face {
+  font-family: 'Univers 55';
+  src: url("./assets/fonts/univers_55.ttf") format("truetype");
+  /* IE9 Compat Modes */
+}
+
+.loader-screen {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  background: white;
+}
+
+.loader-screen .logo {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  opacity: 0;
+}
+
+.loader-screen .logo img {
+  width: 466px;
+  height: 149px;
+}
+
+.loader-screen .ml6 {
+  font-family: "Univers 45 Light", sans-serif;
+  color: #a5a4a0;
+  font-size: 24pt;
+  letter-spacing: 24pt;
+  line-height: 28pt;
+  margin-bottom: 24px;
+  position: relative;
+  font-weight: 900;
+}
+
+.loader-screen .ml6 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.loader-screen .ml6 .letter {
+  display: inline-block;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navbar-logo {
+  width: 172px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.navbar .navbar-logo img {
+  width: 100%;
+}
+
+.navbar .navbar-links {
+  width: 720px;
+}
+
+.navbar .navbar-links ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  width: 100%;
+}
+
+.navbar .navbar-links ul li {
+  color: white;
+  font-size: 20pt;
+  font-family: "Univers 45 Light", sans-serif;
+}
+
+.navbar .navbar-links ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.section-page {
+  width: 100%;
+  height: 100vh !important;
+  padding-top: 20vh;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.swiper-slide {
+  height: -webkit-max-content !important;
+  height: -moz-max-content !important;
+  height: max-content !important;
+}
+
+.swiper-slide .circle {
+  position: relative;
+}
+
+.swiper-slide .circle img {
+  width: 85%;
+  border-radius: 50%;
+  -webkit-filter: opacity(0.5);
+          filter: opacity(0.5);
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.swiper-slide .circle .circle-desc {
+  color: white;
+  font-family: "Univers 45 Light", sans-serif;
+  position: absolute;
+  top: 27%;
+  padding-left: 3em;
+  padding-right: 8em;
+}
+
+.swiper-slide .circle .circle-desc h4 {
+  font-size: 30px;
+  letter-spacing: 6px;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.swiper-slide .circle .circle-desc p {
+  font-size: 13px;
+  letter-spacing: 3px;
+  opacity: 0;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+}
+
+.swiper-slide-active .circle img {
+  width: 100%;
+  -webkit-filter: opacity(1);
+          filter: opacity(1);
+}
+
+.swiper-slide-active .circle .circle-desc h4 {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+
+.swiper-slide-active .circle .circle-desc p {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 1;
+}
+
+.about .about-container,
+.service .about-container,
+.projects .about-container {
+  padding-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about .about-container .text-content,
+.service .about-container .text-content,
+.projects .about-container .text-content {
+  color: white;
+  width: 45%;
+}
+
+.about .about-container .text-content .page-title,
+.service .about-container .text-content .page-title,
+.projects .about-container .text-content .page-title {
+  font-family: "Univers 55", sans-serif;
+  font-size: 19pt;
+}
+
+.about .about-container .text-content .about-title,
+.service .about-container .text-content .about-title,
+.projects .about-container .text-content .about-title {
+  font-family: "Univers 45 Light", sans-serif;
+  font-size: 30pt;
+  letter-spacing: 3pt;
+}
+
+.about .about-container .text-content .about-desc,
+.service .about-container .text-content .about-desc,
+.projects .about-container .text-content .about-desc {
+  font-family: "Univers 45 Light", sans-serif;
+  letter-spacing: 3pt;
+}
+
+.about .about-container .image-content,
+.service .about-container .image-content,
+.projects .about-container .image-content {
+  width: 45%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.about .about-container .image-content img,
+.service .about-container .image-content img,
+.projects .about-container .image-content img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.about .about-container .circle-content,
+.service .about-container .circle-content,
+.projects .about-container .circle-content {
+  width: 588px;
+  height: 543px;
+  position: relative;
+}
+
+.about .about-container .circle-content .circle,
+.service .about-container .circle-content .circle,
+.projects .about-container .circle-content .circle {
+  width: 165px;
+  height: 165px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* align-content: center; */
+  text-align: center;
+  color: #b0b1b3;
+  font-family: "Univers 45 Light", sans-serif;
+  letter-spacing: 1pt;
+  font-size: 11pt;
+}
+
+.about .about-container .circle-content .circle1,
+.service .about-container .circle-content .circle1,
+.projects .about-container .circle-content .circle1 {
+  top: 0;
+  right: 0;
+}
+
+.about .about-container .circle-content .circle2,
+.service .about-container .circle-content .circle2,
+.projects .about-container .circle-content .circle2 {
+  top: 0;
+  right: 31%;
+}
+
+.about .about-container .circle-content .circle3,
+.service .about-container .circle-content .circle3,
+.projects .about-container .circle-content .circle3 {
+  top: 27%;
+  right: 15%;
+}
+
+.about .about-container .circle-content .circle4,
+.service .about-container .circle-content .circle4,
+.projects .about-container .circle-content .circle4 {
+  top: 27%;
+  right: 46%;
+}
+
+.about .about-container .circle-content .circle5,
+.service .about-container .circle-content .circle5,
+.projects .about-container .circle-content .circle5 {
+  top: 54%;
+  right: 30%;
+}
+
+.about .about-container .circle-content .circle6,
+.service .about-container .circle-content .circle6,
+.projects .about-container .circle-content .circle6 {
+  top: 54%;
+  right: 61%;
+}
+
+.about .about-container .circle-content-project,
+.service .about-container .circle-content-project,
+.projects .about-container .circle-content-project {
+  width: 656px;
+  height: 655px;
+  position: relative;
+}
+
+.about .about-container .circle-content-project .circle,
+.service .about-container .circle-content-project .circle,
+.projects .about-container .circle-content-project .circle {
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  /* align-content: center; */
+  text-align: center;
+  color: #b0b1b3;
+  font-family: "Univers 45 Light", sans-serif;
+  letter-spacing: 1pt;
+  font-size: 11pt;
+}
+
+.about .about-container .circle-content-project .circle1,
+.service .about-container .circle-content-project .circle1,
+.projects .about-container .circle-content-project .circle1 {
+  width: 255px;
+  height: 255px;
+  top: 0;
+  right: 0;
+}
+
+.about .about-container .circle-content-project .circle2,
+.service .about-container .circle-content-project .circle2,
+.projects .about-container .circle-content-project .circle2 {
+  width: 142px;
+  height: 142px;
+  top: 0;
+  right: 44%;
+}
+
+.about .about-container .circle-content-project .circle3,
+.service .about-container .circle-content-project .circle3,
+.projects .about-container .circle-content-project .circle3 {
+  width: 250px;
+  height: 250px;
+  top: 40%;
+  right: 2%;
+}
+
+.about .about-container .circle-content-project .circle4,
+.service .about-container .circle-content-project .circle4,
+.projects .about-container .circle-content-project .circle4 {
+  width: 300px;
+  height: 300px;
+  top: 42%;
+  right: 46%;
+}
+
+.about .about-container .circle-content-project .circle5,
+.service .about-container .circle-content-project .circle5,
+.projects .about-container .circle-content-project .circle5 {
+  top: 54%;
+  right: 30%;
+}
+
+.about .about-container .circle-content-project .circle6,
+.service .about-container .circle-content-project .circle6,
+.projects .about-container .circle-content-project .circle6 {
+  top: 54%;
+  right: 61%;
+}
+
+.press .about-container {
+  padding-top: 1em;
+}
+
+.press .about-container .text-content {
+  color: white;
+  position: relative;
+}
+
+.press .about-container .text-content .page-title {
+  font-family: "Univers 55", sans-serif;
+  font-size: 19pt;
+}
+
+.press .about-container .text-content .press-lists {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.press .about-container .text-content .press-lists .press-image {
+  width: 230px;
+  margin-right: 3em;
+}
+
+.press .about-container .text-content .press-lists .press-image img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.press .about-container .text-content .press-lists .press-desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Univers 45 Light", sans-serif;
+}
+
+.press .about-container .text-content .press-lists .press-desc .desc-title {
+  font-size: 30px;
+}
+
+.press .about-container .text-content .press-lists .press-desc .desc-title p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.press .about-container .text-content .press-lists .press-desc .desc-subtitle {
+  font-size: 18px;
+}
+
+.press .about-container .text-content .press-lists .press-desc .desc-subtitle p {
+  margin-bottom: 0;
+}
+
+.press .about-container .text-content .more-press {
+  width: 100%;
+  font-family: "Univers 45 Light", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.press .about-container .text-content .more-press p {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  cursor: pointer;
+}
+
+.contact .about-container {
+  padding-top: 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.contact .about-container .text-content {
+  color: white;
+  width: 50%;
+}
+
+.contact .about-container .text-content .page-title {
+  font-family: "Univers 55", sans-serif;
+  font-size: 19pt;
+}
+
+.contact .about-container .text-content .about-title {
+  font-family: "Univers 45 Light", sans-serif;
+  font-size: 30pt;
+  letter-spacing: 3pt;
+}
+
+.contact .about-container .text-content .about-desc {
+  font-family: "Univers 45 Light", sans-serif;
+  letter-spacing: 1pt;
+  line-height: 1.5em;
+}
+
+.contact .about-container .lower {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 1em;
+}
+
+.contact .about-container .lower .privacy-policy {
+  font-family: "Univers 55", sans-serif;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 280px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact .about-container .lower .privacy-policy p {
+  margin: 0;
+}
+
+.contact .about-container .lower .copyright {
+  font-family: "Univers 45 Light", sans-serif;
+  color: white;
+}
+/*# sourceMappingURL=style.css.map */
